@@ -1,0 +1,21 @@
+Link :
+https://s3.amazonaws.com/metro-extracts.mapzen.com/raleigh_north-carolina.osm.bz2
+
+
+Raleigh is the capital of the state of North Carolina as well as the seat of Wake County in the United States. 
+Raleigh is known as the "City of Oaks" for its many oak trees, which line the streets in the heart of the city.
+
+The dataset of my hometown Thalassery, Kerala, India was very small(less than 50 MB). So, I decided to take a place which 
+I have visited with my family. I choose Raleigh, North Carolina, since I went there during my last vacation and was there 
+for over a month. I am still familiar with the places in Raleigh, so I thought it would be interesting to work with this 
+dataset.
+
+PS: in order to upload the sample osm file I had to change the code slightly. My osm file is slightly less than 500 MB. 
+Using the given code I could shrink to only around 50 MB. Since the requirement was 1-10 MB I had to slightly modify it. 
+I changed it to:
+
+for i, element in enumerate(get_element(OSM_FILE)):
+        if i % 50 == 0:
+            output.write(ET.tostring(element, encoding='utf-8'))
+
+    output.write('</osm>')
